@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F10C801F-4F31-4F8A-8D8F-C50E85EF49D1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ClinicsUpdater</RootNamespace>
-    <AssemblyName>ClinicsUpdater</AssemblyName>
+    <ProjectGuid>{0A370B25-84C7-40CA-84D4-0F116489C458}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hd_Jan_2013</RootNamespace>
+    <AssemblyName>Hd-Jan-2013</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.2.1\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -46,7 +41,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,42 +50,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas.cs" />
-    <Compile Include="AspNetRoles.cs" />
-    <Compile Include="AspNetUserClaims.cs" />
-    <Compile Include="AspNetUserLogins.cs" />
-    <Compile Include="AspNetUsers.cs" />
     <Compile Include="Categories.cs" />
     <Compile Include="Clinics.cs" />
     <Compile Include="ClinicSubscriptions.cs" />
-    <Compile Include="C__MigrationHistory.cs" />
     <Compile Include="Events.cs" />
-    <Compile Include="HealthDirContext.cs" />
-    <Compile Include="Keywords.cs" />
+    <Compile Include="HdJan2013Context.cs" />
     <Compile Include="Persons.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="StripeEventLogs.cs" />
-    <Compile Include="StripeLocalInvoices.cs" />
     <Compile Include="SubscriptionTypes.cs" />
     <Compile Include="ZipcodesDK.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hd-Jan-2013\Hd-Jan-2013.csproj">
-      <Project>{0a370b25-84c7-40ca-84d4-0f116489c458}</Project>
-      <Name>Hd-Jan-2013</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hd-June-2011\Hd-June-2011.csproj">
-      <Project>{fd96388d-b3c6-49d6-8eac-a7ee3eb3b007}</Project>
-      <Name>Hd-June-2011</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
